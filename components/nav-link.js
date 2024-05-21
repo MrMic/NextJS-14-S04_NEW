@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function NavLink( { href, children } ) {
+export default function NavLink({ href, children }) {
   const path = usePathname();
   // console.log( path );
 
   return (
-    <Link href={ href } className={ path.startsWith( href ) ? "active" : undefined }>{ children }</Link>
+    <Link href={href} className={path.startsWith(href) ? "active" : undefined}>{children}</Link>
   )
 };
