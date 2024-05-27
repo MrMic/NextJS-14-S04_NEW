@@ -52,6 +52,7 @@ const DUMMY_NEWS = [
 
 const db = sqlite('data.db');
 
+// ______________________________________________________________________
 function initDb() {
   db.prepare(
     'CREATE TABLE IF NOT EXISTS news (id INTEGER PRIMARY KEY, slug TEXT UNIQUE, title TEXT, content TEXT, date TEXT, image TEXT)'
@@ -70,6 +71,7 @@ function initDb() {
   }
 }
 
+// ______________________________________________________________________
 const app = express();
 
 app.use(cors())
@@ -79,6 +81,7 @@ app.get('/news', (req, res) => {
   res.json(news);
 });
 
+// ______________________________________________________________________
 initDb();
 
 app.listen(8080);
