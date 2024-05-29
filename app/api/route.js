@@ -1,8 +1,8 @@
-export function GET( request ) {
-  console.log( request )
+export function GET(request) {
+  // console.log( request )
 
   // return Response.json({})
-  return new Response( 'Hello, Next.js!' )
+  return new Response('Hello, Next.js!')
 }
 
 // export function POST( request ) {
